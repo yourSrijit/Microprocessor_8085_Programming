@@ -1,0 +1,19 @@
+LXI H,F000
+MOV C,M
+DCR C
+loop3:MOV D,C
+LXI H,F001
+loop2:MOV A,M
+INX H
+CMP M
+JC loop1
+MOV E,M
+MOV M,A
+DCX H
+MOV M,E
+INX H
+loop1:DCR D
+JNZ loop2
+DCR C
+ JNZ loop3
+HLT

@@ -1,0 +1,15 @@
+LDA 4050
+MVI B,01
+MVI C,01
+loop3:SUB B
+JC loop1
+JZ loop2
+INR C
+INR B
+INR B
+JMP loop3
+loop2:DCR C
+loop1:DCR C
+MOV A,C
+STA 4051
+HLT

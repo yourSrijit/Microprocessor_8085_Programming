@@ -1,0 +1,12 @@
+MVI B,00
+MVI C,08
+LDA 8500
+loop1:RRC
+JNC loop
+INR B
+loop:DCR C
+JNZ loop1
+MOV A,B
+STA 8600
+HLT
+
